@@ -174,6 +174,9 @@ func NewRGBLedMatrix(config *HardwareConfig) (c Matrix, err error) {
 
 	w, h := config.geometry()
 	m := C.led_matrix_create_from_options(config.toC(), nil, nil)
+	if m == nil {
+		return nil, fmt.Errorf("unable to allocate memory")
+	}
 	b := C.led_matrix_create_offscreen_canvas(m)
 	c = &RGBLedMatrix{
 		Config: config,
@@ -181,9 +184,6 @@ func NewRGBLedMatrix(config *HardwareConfig) (c Matrix, err error) {
 		matrix: m,
 		buffer: b,
 		leds:   make([]C.uint32_t, w*h),
-	}
-	if m == nil {
-		return nil, fmt.Errorf("unable to allocate memory")
 	}
 
 	return c, nil
