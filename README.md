@@ -3,7 +3,7 @@
 
 Go binding for [`rpi-rgb-led-matrix`](https://github.com/hzeller/rpi-rgb-led-matrix) an excellent C++ library to control [RGB LED displays](https://learn.adafruit.com/32x16-32x32-rgb-led-matrix/overview) with Raspberry Pi GPIO.
 
-This library includes the basic bindings to control de LED Matrix directly and also a convenient [ToolKit](https://godoc.org/github.com/mcuadros/go-rpi-rgb-led-matrix#ToolKit) with more high level functions. Also some [examples](https://github.com/mcuadros/go-rpi-rgb-led-matrix/tree/master/examples) are included to test the library and the configuration.
+This library includes the basic bindings to control de LED Matrix directly and also a convenient [ToolKit](https://godoc.org/github.com/mcuadros/go-rpi-rgb-led-matrix#ToolKit) with more high level functions.
 
 The [`Canvas`](https://godoc.org/github.com/mcuadros/go-rpi-rgb-led-matrix#Canvas) struct implements the [`image.Image`](https://golang.org/pkg/image/#Image) interface from the Go standard library. This makes the interaction with the matrix simple as work with a normal image in Go, allowing the usage of any Go library build around the `image.Image` interface.
 
@@ -79,8 +79,6 @@ close <- true
 
 The image of the header was recorded using this few lines, the running _Mario_ gif, and three 32x64 pannels. 
 <img src="https://cloud.githubusercontent.com/assets/1573114/20248173/2e2f97ae-a9de-11e6-95e6-e0548199501d.gif" align="right" width="100" />
-
-Check the folder [`examples`](https://github.com/mcuadros/go-rpi-rgb-led-matrix/tree/master/examples) folder for more examples
 
 
 Matrix Emulation
