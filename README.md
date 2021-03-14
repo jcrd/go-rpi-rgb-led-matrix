@@ -81,14 +81,6 @@ The image of the header was recorded using this few lines, the running _Mario_ g
 <img src="https://cloud.githubusercontent.com/assets/1573114/20248173/2e2f97ae-a9de-11e6-95e6-e0548199501d.gif" align="right" width="100" />
 
 
-Matrix Emulation
-----------------
-
-As part of the library an small Matrix emulator is provided. The emulator renderize a virtual RGB matrix on a window in your desktop, without needing a real RGB matrix connected to your computer.
-
-To execute the emulator set the `MATRIX_EMULATOR` environment variable to `1`, then when `NewRGBLedMatrix` is used, a `emulator.Emulator` is returned instead of a interface the real board.
-
-
 License
 -------
 
