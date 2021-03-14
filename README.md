@@ -15,23 +15,23 @@ Installation
 The recommended way to install `go-rpi-rgb-led-matrix` is:
 
 ```sh
-go get github.com/mcuadros/go-rpi-rgb-led-matrix
+go get github.com/jcrd/go-rpi-rgb-led-matrix
 ```
 
 Then you will get an **expected** error like this:
 
 ```
-# github.com/mcuadros/go-rpi-rgb-led-matrix
+# github.com/jcrd/go-rpi-rgb-led-matrix
 /usr/bin/ld: cannot find -lrgbmatrix
 collect2: error: ld returned 1 exit status
 ```
 
 This happens because you need to compile the `rgbmatrix` C bindings:
 ```sh
-cd $GOPATH/src/github.com/mcuadros/go-rpi-rgb-led-matrix/vendor/rpi-rgb-led-matrix/
+cd $GOPATH/src/github.com/jcrd/go-rpi-rgb-led-matrix/vendor/rpi-rgb-led-matrix/
 git submodule update --init
 make
-cd $GOPATH/src/github.com/mcuadros/go-rpi-rgb-led-matrix/
+cd $GOPATH/src/github.com/jcrd/go-rpi-rgb-led-matrix/
 go install -v ./...
 ```
 
