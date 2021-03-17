@@ -28,8 +28,7 @@ collect2: error: ld returned 1 exit status
 
 This happens because you need to compile the `rgbmatrix` C bindings:
 ```sh
-cd $GOPATH/src/github.com/jcrd/go-rpi-rgb-led-matrix/vendor/rpi-rgb-led-matrix/
-git submodule update --init
+cd $GOPATH/src/github.com/jcrd/go-rpi-rgb-led-matrix/lib/rpi-rgb-led-matrix/
 make
 cd $GOPATH/src/github.com/jcrd/go-rpi-rgb-led-matrix/
 go install -v ./...
