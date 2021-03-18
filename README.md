@@ -12,23 +12,16 @@ To learn about the configuration and the wiring go to the [original library](htt
 Installation
 ------------
 
-The recommended way to install `go-rpi-rgb-led-matrix` is:
+This library is meant to be included in your project as a vendored dependency.
 
+The `go mod vendor` command will not work for this purpose as it *excludes* the
+`lib/` directory containing the required C++ library.
+
+It is recommended to use a tool like [vend](https://github.com/nomad-software/vend) instead.
+
+The C++ library must be built with:
 ```sh
-go get github.com/jcrd/go-rpi-rgb-led-matrix
-```
-
-Then you will get an **expected** error like this:
-
-```
-# github.com/jcrd/go-rpi-rgb-led-matrix
-/usr/bin/ld: cannot find -lrgbmatrix
-collect2: error: ld returned 1 exit status
-```
-
-This happens because you need to compile the `rgbmatrix` C bindings:
-```sh
-cd $GOPATH/src/github.com/jcrd/go-rpi-rgb-led-matrix/
+cd vendor/github.com/jcrd/go-rpi-rgb-led-matrix/
 make
 ```
 
